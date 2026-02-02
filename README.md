@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This project is based on the NeuroScope framework and conducts an in-depth analysis of internal neuron activation patterns in the LLaMA3-8B-Instruct model during Chinese-to-English translation tasks. The research explores how to understand and control the model's translation behavior through techniques such as Goal Hijacking, Neuron Ablation, and Activation Steering.
+This project is based on the NeuroScope framework and conducts an in-depth analysis of internal neuron activation patterns in the LLaMA3-8B-Instruct model during Chinese-to-English translation tasks. The research explores how to understand and control the model's translation behavior through techniques such as Goal Hijacking, Neuron Ablation, and Activation Steering.(for more image, in /images fold)
 
 ## Methodology
 
@@ -32,6 +32,7 @@ Std COMET Score:  0.0783
 #### 3.1 Activation Statistics
 
 Collected activation statistics for all 32 layers of neurons (4,096 neurons per layer):
+
 - Retained samples with COMET score ≥ 0.5 (3,954 samples)
 - Calculated mean and standard deviation for each neuron
 
@@ -84,6 +85,7 @@ By comparing activation patterns between normal translation and hijacked tasks, 
 **Method**: Zero out specific neuron activations during inference
 
 **Optimal Ablation Results**:
+
 - Ablating neurons `[2265, 4055, 2082, 290, 2943]` at **Layer 14** yielded the best results
 - Example ablation output:
   ```
@@ -102,10 +104,12 @@ By comparing activation patterns between normal translation and hijacked tasks, 
 **Method**: Guide model activations by adding directional vectors
 
 **Experimental Setup**:
+
 - Test layers: Selected key layers for steering
 - Strength range: 0.5, 1.0, 2.0
 
 **Optimal Steering Configuration**:
+
 ```
 Layer: 11
 Strength: 0.5
@@ -116,6 +120,7 @@ COMET Score: 0.8941
 *Figure 9: Steering effect heatmap across different layer and strength combinations*
 
 **Best Configuration Example Output**:
+
 ```
 Here is the translation:
 I want to write science fiction novels, please give me some inspiration.
@@ -211,6 +216,6 @@ This project uses the NeuroScope framework(Working Title) and WMT19 dataset. Tha
 
 ---
 
-**Author**: Shuaizhou Wang  
-**Date**: January 2026  
+**Author**: Shuaizhou Wang
+**Date**: January 2026
 **License**: MIT License
