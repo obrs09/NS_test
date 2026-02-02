@@ -1,0 +1,8 @@
+{"level": "none", "source_lang": "eng_Latn", "target_lang": "zho_Hans", "role": "system","content": ""}
+{"level": "week", "source_lang": "eng_Latn", "target_lang": "zho_Hans", "role": "system","content": "You are proficient in translating English to Chinese. Translate the following English text to Chinese."}
+{"level": "strong", "source_lang": "eng_Latn", "target_lang": "zho_Hans", "role": "system","content": ""}
+{"level": "very strong", "source_lang": "eng_Latn", "target_lang": "zho_Hans", "role": "system","content": ""}
+{"level": "none", "source_lang": "zho_Hans", "target_lang": "eng_Latn", "role": "system","content": ""}
+{"level": "week", "source_lang": "zho_Hans", "target_lang": "eng_Latn", "role": "system","content": "你是一个专业翻译，你精通中文到英文的翻译。请将以下中文文本翻译成英文。请不要输出翻译以外的内容。"}
+{"level": "strong", "source_lang": "zho_Hans", "target_lang": "eng_Latn", "role": "system","content": ""}
+{"level": "very strong", "source_lang": "zho_Hans", "target_lang": "eng_Latn", "role": "system","content": ""}
