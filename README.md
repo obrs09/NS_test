@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This project is based on the NeuroScope framework and conducts an in-depth analysis of internal neuron activation patterns in the LLaMA3-8B-Instruct model during Chinese-to-English translation tasks. The research explores how to understand and control the model's translation behavior through techniques such as Goal Hijacking, Neuron Ablation, and Activation Steering.(for more image, in /images fold)
+This project is based on the NeuroScope framework and conducts an in-depth analysis of internal neuron activation patterns in the LLaMA3-8B-Instruct model during Chinese-to-English translation tasks. The research explores how to understand and control the model's translation behavior through techniques such as Goal Hijacking, Neuron Ablation, and Activation Steering.(for more image, in /images folder)
 
 ## Methodology
 

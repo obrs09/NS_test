@@ -1,0 +1,46 @@
+{
+  "phase": "3",
+  "description": "Early Warning + Causal Blocking Pipeline (corrected v2)",
+  "bug_fixes": [
+    "Track correct answer token via tokenizer (was: model top-1 = wrong answer)",
+    "Steer on clean prompt, not corrupt (matches pipeline use case)",
+    "Use absolute metrics (\u0394p, \u0394rank) instead of degenerate ratio p_int/p_baseline"
+  ],
+  "part_a": {
+    "method": "Early-layer activation features (L0-L9) + classifier",
+    "best_model": "GBM",
+    "cv_auc": 0.8638549075391181,
+    "n_features": 91,
+    "top_features": [
+      "cos_L3_L2",
+      "early_late_norm_ratio",
+      "kurtosis_L9",
+      "norm_growth_L7",
+      "norm_L2"
+    ]
+  },
+  "part_b": {
+    "method": "Correction steering (mean_faithful - mean_halluc, normalized) on CLEAN prompt",
+    "metrics": "\u0394p(correct), \u0394rank(correct), top-1 flip rate",
+    "optimal_layer": 2,
+    "optimal_strength": 20.0,
+    "n_valid": 187,
+    "n_total": 187,
+    "pct_rank_improved": 77.54010695187165,
+    "pct_p_improved": 88.77005347593582,
+    "pct_top1_flipped": 1.06951871657754,
+    "median_delta_rank": 934.0,
+    "mean_delta_p": 0.008369663326596114,
+    "baseline_median_rank": 2023.0,
+    "steered_median_rank": 167.0
+  },
+  "part_c": {
+    "baseline_accuracy": 0.34615384615384615,
+    "pipeline_accuracy_conservative": 0.34965034965034963,
+    "pipeline_accuracy_optimistic": 0.8531468531468531,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "note": "precision/recall are full-data refit (overfit); CV AUC=0.860 is real generalization"
+  }
+}
